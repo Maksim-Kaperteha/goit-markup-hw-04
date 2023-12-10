@@ -6,6 +6,7 @@
   --black-cl--: #212121;
   --blue-cl--: #2196F3;
   --silver-cl--: #757575;
+  --color-icons--: #AFB1B8;
 }
 
 body {
@@ -81,6 +82,10 @@ a {
 
 }
 
+.item-navigation:not(:last-child) {
+  margin-right: 50px;
+}
+
 .list-item {
   display: flex;
   align-items: center;
@@ -117,7 +122,6 @@ a {
   align-items: center;
 }
 
-
 .header-icons {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -125,11 +129,12 @@ a {
   fill: currentColor;
 }
 
-.item-navigation {
+.item-navigation-team {
   margin-right: 30px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.item-navigation:last-child {
+.item-navigation-team:last-child {
   margin-right: 0;
 }
 
@@ -219,6 +224,23 @@ a {
 
 
 /* Section-features */
+.features-list {
+  display: flex;
+  gap: 30px;
+}
+
+.features-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #F5F4FA;
+  margin-bottom: 30px;
+
+}
 
 .section.features {
   padding-bottom: 0;
@@ -294,10 +316,12 @@ a {
   margin-bottom: 50px;
 }
 
-.item-navigation {}
-
 .team-img {
   display: block;
+}
+
+.item-navigation-team {
+  background-color: #fff;
 }
 
 .team-card {
@@ -313,7 +337,6 @@ a {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.48px;
-
 }
 
 .subtitle-team {
@@ -324,16 +347,114 @@ a {
   line-height: 1.71;
   letter-spacing: 0.42px;
   margin-top: 10px;
+}
 
+.socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-item {
+  display: flex;
+  gap: 10px;
 }
 
 
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--blue-cl--);
+}
+
+.socials-link:hover svg {
+  fill: var(--white-cl--);
+}
+
+.socials-icons {
+  fill: var(--color-icons--);
+}
+
+/* Section-clients */
+.clients-title {
+  color: #212121;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #AFB1B8;
+
+}
+
+.cliens-icons {
+  fill: var(--color-icons--);
+}
+
+.clients-link:hover,
+.cliens-link:focus {
+  border: 1px solid #2196F3;
+}
+
+.clients-link:hover svg {
+  fill: var(--blue-cl--);
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 /* Footer */
+.container.footer-socials {
+  display: flex;
+  align-items: center;
+  align-items: baseline;
+}
+
 .footer {
+  display: flex;
   background: var(--background-cl-black--);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-logo-list {
+  display: flex;
 }
 
 .logo-link-footer {
@@ -362,7 +483,7 @@ a {
   font-style: normal;
 }
 
-address {
+.address {
   margin-top: 28px;
 
 }
@@ -390,6 +511,57 @@ address {
   margin-bottom: 12px;
 }
 
+/* Footer socials icons */
+.footer-container-icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.footer-socials-icons {
+  display: flex;
+}
+
+.footer-icons-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons-item {
+  display: flex;
+}
+
+.footer-link-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #FFFFFF1A;
+}
+
+.footer-link-icons:hover,
+.footer-link-icons:focus {
+  background-color: var(--blue-cl--);
+}
+
+.footer-icons {
+  fill: var(--white-cl--);
+}
+
+
+.uppertitle-socials {
+  display: flex;
+  margin-bottom: 20px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
 /*Portofolio html*/
 
 
@@ -401,6 +573,13 @@ address {
 
 .list-filters {
   margin-bottom: 50px;
+}
+
+.item-portfolio:hover,
+.item-portfolio:focus {
+
+  background: #FFF;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .container .list-portfolio {
